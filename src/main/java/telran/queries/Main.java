@@ -43,7 +43,7 @@ public class Main {
     static void queryProcessing(InputOutput io) {
         String queryString = io.readString("enter JPQL query string");
         Query query = em.createQuery(queryString);
-        @SuppressWarnings({ "unchecked", "rawtypes" })
+        @SuppressWarnings({"rawtypes"})
         List result = query.getResultList();
         if (result.isEmpty()) {
             io.writeLine("No data");
